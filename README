@@ -1,5 +1,16 @@
-template --> themes/base/login/template.ftl
+# Keycloak Digital Garage theme
+Keycloak custom theme for integrate Cochera with SSO.
+
+# Docker
+Docker image with resources, using jboss/keycloak-postgres.
+SSL configuration can be added to the Dockerfile in order to automate the Keycloak deployment. Adding standalone.xml to enable SSL on Wildfly application server and certificates.
+
+# Docker file mapping
+template.ftl --> themes/base/login/template.ftl
 login.ftl --> themes/base/login/login.ftl
 register.ftl --> themes/base/login/register.ftl
 login.css --> themes/keycloak/login/resources/css/login.css
+
+# Openshift Template
+Working.
 

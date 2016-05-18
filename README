@@ -1,4 +1,5 @@
 template --> themes/base/login/template.ftl
 login.ftl --> themes/base/login/login.ftl
-# css
+register.ftl --> themes/base/login/register.ftl
+login.css --> themes/keycloak/login/resources/css/login.css
 

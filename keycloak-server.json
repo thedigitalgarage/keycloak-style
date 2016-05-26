@@ -1,0 +1,68 @@
+{
+  "providers": [
+    "classpath:${jboss.home.dir}/providers/*"
+  ],
+  "admin": {
+    "realm": "master"
+  },
+  "eventsStore": {
+    "provider": "mongo",
+    "mongo": {
+      "exclude-events": [
+        "REFRESH_TOKEN"
+      ]
+    }
+  },
+  "realm": {
+    "provider": "mongo"
+  },
+  "user": {
+    "provider": "mongo"
+  },
+  "userCache": {
+    "default": {
+      "enabled": true
+    }
+  },
+  "userSessionPersister": {
+    "provider": "mongo"
+  },
+  "timer": {
+    "provider": "basic"
+  },
+  "theme": {
+    "staticMaxAge": 2592000,
+    "cacheTemplates": true,
+    "cacheThemes": true,
+    "folder": {
+      "dir": "${jboss.home.dir}/themes"
+    }
+  },
+  "scheduled": {
+    "interval": 900
+  },
+  "connectionsHttpClient": {
+    "default": {}
+  },
+  "realmCache": {
+    "provider": "default",
+    "default": {
+      "enabled": true
+    }
+  },
+  "connectionsInfinispan": {
+    "provider": "default",
+    "default": {
+      "cacheContainer": "java:comp/env/infinispan/Keycloak"
+    }
+  },
+  "connectionsMongo": {
+    "default": {
+      "host": "${env.MONGO_PORT_27017_TCP_ADDR}",
+      "port": "27017",
+      "db": "${env.MONGODB_DBNAME:keycloak}",
+      "connectionsPerHost": 100,
+      "databaseSchema": "update"
+    }
+  }
+}

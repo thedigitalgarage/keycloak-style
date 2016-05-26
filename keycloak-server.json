@@ -63,8 +63,8 @@
       "db": "${env.MONGODB_DBNAME:keycloak}",
       "connectionsPerHost": 100,
       "databaseSchema": "update",
-      "user": "env.MONGODB_USER:keycloak",
-      "password": "env.MONGODB_PASSOWORD:keycloak"
+      "user": "${env.MONGODB_USER:keycloak}",
+      "password": "${env.MONGODB_PASSWORD:keycloak}"
     }
   }
 }

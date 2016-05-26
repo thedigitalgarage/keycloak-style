@@ -62,7 +62,9 @@
       "port": "27017",
       "db": "${env.MONGODB_DBNAME:keycloak}",
       "connectionsPerHost": 100,
-      "databaseSchema": "update"
+      "databaseSchema": "update",
+      "user": "env.MONGODB_USER:keycloak",
+      "password": "env.MONGODB_PASSOWORD:keycloak"
     }
   }
 }

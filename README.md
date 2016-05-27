@@ -16,15 +16,17 @@ login.css --> themes/keycloak/login/resources/css/login.css
 
 ## SSL
 Create self-signed certificate
+
     sudo openssl genrsa -out example-test.key 2048
     sudo openssl req -new -key example-test.key -out example-test.csr
-    sudo openssl x509 -req -days 366 -in example-test.csr        -signkey example-test.key -out example-test.crt
+    sudo openssl x509 -req -days 366 -in example-test.csr -signkey example-test.key -out example-test.crt
 
 Then create a secure route for keycloak service with TCP:8080 port.
 Use EDGE TLS termination and fill certifate and private key previously generated.
 
 ## Previous
 Create mongodb database or use openshift-keycloak.yaml template instead.
+
     oc create -f <filename> -n <project>
 
 

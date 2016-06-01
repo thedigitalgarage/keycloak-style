@@ -8,8 +8,8 @@ ADD css/*.css /opt/jboss/keycloak/themes/keycloak/login/resources/css/
 ADD standalone.xml /opt/jboss/keycloak/standalone/configuration/
 ADD keycloak-server.json /opt/jboss/keycloak/standalone/configuration/
 
-RUN chown -R jboss:jboss /opt/jboss/keycloak
-RUN chmod -R 750 /opt/jboss/keycloak
+RUN chown -R root:root /opt/jboss/keycloak
+RUN chmod -R 755 /opt/jboss/keycloak
 
 EXPOSE 8080
 

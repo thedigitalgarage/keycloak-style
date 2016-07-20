@@ -25,6 +25,13 @@
     </extensions>
     <management>
         <security-realms>
+            <security-realm name="UndertowRealm">
+                <server-identities>
+                    <ssl>
+                        <keystore path="keycloak.jks" relative-to="jboss.server.config.dir" keystore-password="keycloak"/>
+                    </ssl>
+                </server-identities>
+            </security-realm>
             <security-realm name="ManagementRealm">
                 <authentication>
                     <local default-user="$local" skip-group-loading="true"/>
@@ -379,6 +386,7 @@
         <subsystem xmlns="urn:jboss:domain:undertow:3.0">
             <buffer-cache name="default"/>
             <server name="default-server">
+                <https-listener name="https" socket-binding="https" security-realm="UndertowRealm"/>
                 <http-listener name="default" socket-binding="http" redirect-socket="proxy-https" proxy-address-forwarding="true"/>
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
@@ -417,8 +425,8 @@
         <socket-binding name="management-https" interface="management"
                       port="${jboss.management.https.port:9993}"/>
         <socket-binding name="ajp" port="${jboss.ajp.port:8009}"/>
-        <socket-binding name="http" port="${jboss.http.port:8080}"/>
-        <socket-binding name="https" port="${jboss.https.port:8443}"/>
+        <socket-binding name="http" port="${jboss.http.port:8180}"/>
+        <socket-binding name="https" port="${jboss.https.port:8543}"/>
         <socket-binding name="txn-recovery-environment" port="4712"/>
         <socket-binding name="txn-status-manager" port="4713"/>
 	<socket-binding name="proxy-https" port="443"/>

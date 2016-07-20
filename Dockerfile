@@ -7,5 +7,5 @@ ADD standalone.xml /opt/jboss/keycloak/standalone/configuration/
 ADD keycloak-server.json /opt/jboss/keycloak/standalone/configuration/
 ADD keycloak.jks /opt/jboss/keycloak/standalone/configuration/
 
-EXPOSE 8180
+EXPOSE 8080 8180
 

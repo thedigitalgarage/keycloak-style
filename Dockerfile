@@ -1,4 +1,4 @@
-FROM jboss/keycloak-mongo
+FROM jboss/keycloak-mongo:1.9.8.Final
 MAINTAINER Bixlabs, eddsuarez@bixlabs.com
 
 ADD html/*.ftl /opt/jboss/keycloak/themes/base/login/

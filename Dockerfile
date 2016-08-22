@@ -8,7 +8,7 @@ ADD theme/keycloak/login/resources/css/*.css /opt/jboss/keycloak/themes/keycloak
 
 ADD standalone.xml /opt/jboss/keycloak/standalone/configuration/
 ADD keycloak-server.json /opt/jboss/keycloak/standalone/configuration/
-ADD keycloak.jks /opt/jboss/keycloak/standalone/configuration/
+ADD godaddy.keycloak.jks /opt/jboss/keycloak/standalone/configuration/
 
 EXPOSE 8080 8180
 

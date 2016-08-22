@@ -28,7 +28,7 @@
             <security-realm name="UndertowRealm">
                 <server-identities>
                     <ssl>
-                        <keystore path="godaddy.keycloak.jks" relative-to="jboss.server.config.dir" keystore-password="Ysdf#^123"/>
+                        <keystore path="godaddy.keycloak.jks" relative-to="jboss.server.config.dir" alias="importkey" keystore-password="Ysdf#^123"/>
                     </ssl>
                 </server-identities>
             </security-realm>

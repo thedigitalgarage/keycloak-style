@@ -1,5 +1,5 @@
 .login-pf body {
-    background: #78be20;
+    background: #65bc45;
     background-size: cover;
 }
 
@@ -372,7 +372,7 @@ ol#kc-totp-settings li:first-of-type {
     max-width: 212px;
     border-radius: 5px;
     box-shadow: none !important;
-    background-color: #78be20 !important;
+    background-color: #65bc45 !important;
     border-color: none !important;
     color: #ffffff;
     font-size: 18px;
@@ -392,7 +392,7 @@ ol#kc-totp-settings li:first-of-type {
 
 
 .form-control:focus, .form-control:hover {
-    border-color: #78be20 ;
+    border-color: #65bc45 ;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
